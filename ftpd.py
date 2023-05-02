@@ -62,8 +62,5 @@ def isRoot():
 		done = -1
 	return done
 
-def isFile(path):
-	return os.path.isfile(path)
-
 if __name__ == "__main__":
 	sys.exit(main(len(sys.argv), sys.argv))
