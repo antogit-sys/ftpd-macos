@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3 
+#!/usr/bin/env python3
 #
 #	Author:		Antonio Perrucci
 #	Company:	Magellano srl (Apulia - Brindisi)
@@ -13,19 +13,22 @@ import os
 import sys
 
 def main(argc, argv):
-	NAME = argv[0]
+	NAME = sys.argv[0]
 	if argc == 1:
 		helper(NAME)
 	elif argc == 2:
-		OP = argv[1]
-		if OP == "status":
-			pass #ftp_status()
-		elif OP == "on":
-			pass #ftp_on()
-		elif OP == "off":
-			pass #ftp_off()
+		if not isRoot():
+			print(NAME+": only root can run this script\n")
 		else:
-			print(NAME+": operation not allowed, use on/off/status")
+			OP = argv[1]
+			if OP == "status":
+				pass #ftp_status()
+			elif OP == "on":
+				pass #ftp_on()
+			elif OP == "off":
+				pass #ftp_off()
+			else:
+				print(NAME+": operation not allowed, use on/off/status")
 
 def helper(NAME):
 	print(NAME+":")
@@ -40,6 +43,11 @@ def helper(NAME):
 	print("\t"+NAME+" on")
 	print("\t"+NAME+" status")
 
-
+def isRoot():
+	done = 0
+	if os.geteuid() == 0:
+		done = -1
+	return done
+	
 if __name__ == "__main__":
 	sys.exit(main(len(sys.argv), sys.argv))
