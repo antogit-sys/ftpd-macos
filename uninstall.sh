@@ -34,7 +34,7 @@ execute() {
 	sleep 1
 	printf "${RED}deleted ${NC}\n"
 	sleep 1
-	printf "ftp_management.py is"
+	printf "ftp_management.py is "
 	printf "${RED}deleted${NC}\n"
 	sudo rm /bin/ftp_management.py
 	printf "${RED}[!] END UNINSTALL${NC}\n"
