@@ -9,7 +9,7 @@ declare -r NC='\033[0m' # No Color
 
 
 function main {
-	essageBox
+	messageBox
 	execute
 	
 exit
