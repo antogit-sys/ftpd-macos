@@ -2,10 +2,9 @@
 # UNINSTALL ftpd.py
 #
 # -- costant
-declare -r LGREEN='\033[1;92m'
+
 declare -r RED='\033[1;31m'
 declare -r LYELLOW='\033[1;33m'
-declare -r LCYAN='\033[0;96m'
 declare -r NC='\033[0m' # No Color
 
 
@@ -38,7 +37,7 @@ execute() {
 	printf "ftp_management.py is"
 	printf "${RED}deleted${NC}\n"
 	sudo rm /bin/ftp_management.py
-	printf "${LGREEN}[!] END UNINSTALL${NC}\n"
+	printf "${RED}[!] END UNINSTALL${NC}\n"
 }
 
 main
