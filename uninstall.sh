@@ -30,7 +30,7 @@ execute() {
 	printf "${LYELLOW}uninstall FTPD Manager\n"
 	echo -e "--------------------------${NC}"
 	cd ..; sudo rm -rf ftpd-macos
-	sudo rm /bin/ftpd.py
+	sudo rm /bin/ftpd
 	printf "ftpd.py is... "
 	sleep 1
 	printf "${RED}deleted ${NC}\n"
