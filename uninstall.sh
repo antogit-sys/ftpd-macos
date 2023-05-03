@@ -33,10 +33,10 @@ execute() {
 	sudo rm /bin/ftpd.py
 	printf "ftpd.py is... "
 	sleep 1
-	printf "${LRED}deleted ${NC}\n"
+	printf "${RED}deleted ${NC}\n"
 	sleep 1
 	printf "ftp_management.py is"
-	printf "${LRED}deleted${NC}\n"
+	printf "${RED}deleted${NC}\n"
 	sudo rm /bin/ftp_management.py
 	printf "${LGREEN}[!] END UNINSTALL${NC}\n"
 }
