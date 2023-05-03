@@ -27,7 +27,7 @@ def main(argc, argv):
 			done = -1
 		else:
 			fm = ftpm.ftpMan()
-			print_init(NAME,"=")
+			print_init("FTPD Manager","=")
 			if fm.isFile:
 				OP = argv[1]
 				if OP == "status":
